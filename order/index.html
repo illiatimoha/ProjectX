@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="Logo&#32;small&#32;white.svg"
+      type="image/png"
+    />
+    <title>CryptoSolve - cryptocurrency exchange</title>
+
+    <meta name="title" content="CryptoSolve - cryptocurrency exchange" />
+    <meta
+      name="description"
+      content="The leading cryptocurrency exchange platform offers different trading options, provides 24/7 customer support, high level of security."
+    />
+    <link href="1fbf120d/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="animate.min.css" rel="stylesheet" />
+    <link href="fonts.css" rel="stylesheet" />
+    <link href="style.min.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <script>
+      const AJAX_URL = "/ajax";
+    </script>
+    <script>
+      let bonus = 5.5 + 100;
+      let minUSD = 30;
+      let maxUSD = 200000;
+    </script>
+  </head>
+
+  <body style="overflow: auto">
+    <div class="wrapper">
+      <div class="preloader" style="display: none">
+        <div class="preloader__circle"></div>
+      </div>
+
+      <header
+        class="header wow animate__fadeInDown"
+        style="visibility: visible; animation-name: fadeInDown"
+      >
+        <div class="container header__container">
+          <div class="header__body">
+            <a class="header__logo header__logo-hide" href="../">
+              <img src="Logo White 1.svg" alt="logo" />
+            </a>
+
+            <div class="header__hide">
+              <a class="header__logo" href="../">
+                <img src="Logo White 1.svg" alt="logo" />
+              </a>
+              <nav class="header__nav">
+                <ul class="header__list">
+                  <li class="header__item">
+                    <a class="header__link" href="../#about">About</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link" href="../#exchange">Exchange</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link" href="../#how-exchange"
+                      >How exchange</a
+                    >
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link" href="../#transactions"
+                      >Transactions</a
+                    >
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link" href="../#support">Support</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="header__wrapper">
+                <!-- <div class="header__lang">
+                        <div class="header__lang-lang">
+                            <a class="header__lang-wrapper" href="">
+                                <img src="/images/ua.svg" alt="ua">
+                                <div class="header__lang-text">
+                                    Eng
+                                </div>
+                            </a>
+                            <a class="header__lang-wrapper header__lang-dropdown"
+                                href="#">
+                                <img src="/images/ru.svg" alt="ru">
+                                <div class="header__lang-text">
+                                    Ru
+                                </div>
+                            </a>
+                        </div>
+                        <img class="header__lang-arrow" src="/images/arrow.svg" alt="arrow">
+                    </div> -->
+                <a class="header__btn" href="../#exchange"> Exchange </a>
+              </div>
+            </div>
+            <div class="header__burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="header__burger-content">
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__link" href="../#about">About</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="../#exchange">Exchange</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="../#how-exchange"
+                    >How exchange</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="../#transactions"
+                    >Transactions</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a class="header__link" href="../#support">Support</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__wrapper">
+              <!-- <div class="header__lang">
+                    <div class="header__lang-lang">
+                        <a class="header__lang-wrapper" href="">
+                            <img src="/images/ua.svg" alt="ua">
+                            <div class="header__lang-text">
+                                Eng
+                            </div>
+                        </a>
+                        <a class="header__lang-wrapper header__lang-dropdown" href="#">
+                            <img src="/images/ru.svg" alt="ru">
+                            <div class="header__lang-text">
+                                Ru
+                            </div>
+                        </a>
+                    </div>
+                    <img class="header__lang-arrow" src="/images/arrow.svg" alt="arrow">
+                </div> -->
+              <a class="header__btn" href="../#exchange"> Exchange </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="transaction">
+          <div
+            class="container transaction__container wow animate__fadeInUp"
+            style="visibility: visible; animation-name: fadeInUp"
+          >
+            <h1 class="transaction__title" id="transaction__title_val"></h1>
+
+            <div class="transaction__order"></div>
+
+            <div class="transaction-1">
+              <div class="transaction__block">
+                <div class="transaction__block-title">
+                  Pay directly to the wallet
+                </div>
+
+                <div class="transaction__block-wrapper">
+                  <div class="transaction__block-text">You send:</div>
+                  <div class="transaction__block-text"></div>
+                </div>
+
+                <div class="transaction__block-input-wrapper">
+                  <div class="transaction__block-input-img">
+                    <img src="coin.svg" alt="coin" />
+                  </div>
+                  <input
+                    class="transaction__block-input"
+                    id="transaction__block_val"
+                    type="text"
+                    value=""
+                    data-value=""
+                    readonly=""
+                  />
+                  <div
+                    class="transaction__block-input-copy transaction__block-input-copy-val"
+                  >
+                    Click to copy
+                  </div>
+                </div>
+                <div class="transaction__block-input-wrapper">
+                  <div class="transaction__block-input-img">
+                    <img src="wallet.svg" alt="wallet" />
+                  </div>
+
+                  <input
+                    class="transaction__block-input"
+                    type="text"
+                    value="..."
+                    data-value=""
+                    readonly=""
+                  />
+
+                  <div
+                    class="transaction__block-input-copy transaction__block-input-copy-wallet"
+                  >
+                    Click to copy
+                  </div>
+                </div>
+
+                <a
+                  class="transaction__block-btn"
+                  id="confirm_order"
+                  href="../order/confirm"
+                  >Confirm</a
+                >
+              </div>
+
+              <div class="transaction__block">
+                <div class="transaction__block-title">
+                  Pay by scanning the QR code!
+                </div>
+
+                <div class="transaction__block-qr">
+                  <img src="" alt="QR code" />
+                </div>
+              </div>
+            </div>
+
+            <div class="transaction__btns">
+              <a class="transaction__btn" href="../">
+                <img src="home.svg" alt="home" />
+                Get back
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__start">
+            <img
+              class="footer__logo"
+              src="Logo&#32;small&#32;white.svg"
+              alt="logo"
+            />
+            <div class="footer__text">ALL RIGHTS RESERVED © 2022</div>
+          </div>
+          <div class="footer__end">
+            <a
+              class="footer__link"
+              href="https://t.me/cryptoexchangersupportbot"
+            >
+              <img src="tg(1).svg" alt="tg" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="c5411d66/jquery.js"></script>
+    <script src="confirm_order.js"></script>
+    <script>
+      var check = document.querySelector("#transaction__title_val").textContent;
+
+      if (check === "") {
+        window.location.href = "../";
+      }
+    </script>
+    <script src="b7c8d7ad/yii.js"></script>
+    <script src="script.js"></script>
+    <script src="wow.min.js"></script>
+    <script src="transaction.js"></script>
+  </body>
+</html>
